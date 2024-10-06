@@ -16,7 +16,11 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
+    photo: {
+        type: String,
+        default: 'https://img.freepik.com/premium-photo/stylish-man-flat-vector-profile-picture-ai-generated_606187-310.jpg',
+    },
 }, {timestamps: true});
 
 const User = mongoose.model('User', userSchema);
